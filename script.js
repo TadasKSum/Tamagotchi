@@ -348,8 +348,6 @@ function petWander() {
         thePet.style.backgroundPositionY = `${animationType}px`;
         thePet.style.backgroundPositionX = `${frameSize}px`;
         frameSize += frameSize;
-        if (frameSize >= 196)
-            frameSize = 64;
     }, 200);
     return new Promise(resolve => {
         thePet.style.transition = `top 1000ms, left 1000ms, transform 1000ms`;

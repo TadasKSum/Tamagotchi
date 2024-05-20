@@ -417,7 +417,6 @@ function petWander() {
         thePet.style.backgroundPositionY = `${animationType}px`
         thePet.style.backgroundPositionX = `${frameSize}px`;
         frameSize += frameSize;
-        if (frameSize >= 196) frameSize = 64;
     }, 200)
 
     return new Promise(resolve => {

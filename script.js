@@ -114,6 +114,7 @@ let yourGold = 500;
 let canPet = true;
 /* Animation variables */
 let frameSize = 64;
+let animationFrames = 0;
 let xFramesWidth = frameSize * 3;
 let yFramesHeight = frameSize * 4;
 /*===Mini Game===*/
@@ -344,10 +345,12 @@ function petWander() {
             animationType = frameSize * 3;
         }
     }
+    // Changed Animation function
+    animationFrames = frameSize;
     playAnimation = setInterval(() => {
         thePet.style.backgroundPositionY = `${animationType}px`;
-        thePet.style.backgroundPositionX = `${frameSize}px`;
-        frameSize += frameSize;
+        thePet.style.backgroundPositionX = `${animationFrames}px`;
+        animationFrames += animationFrames;
     }, 200);
     return new Promise(resolve => {
         thePet.style.transition = `top 1000ms, left 1000ms, transform 1000ms`;

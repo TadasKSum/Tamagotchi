@@ -149,6 +149,7 @@ let canPet: boolean = true;
 
 /* Animation variables */
 let frameSize: number = 64;
+let animationFrames: number = 0;
 let xFramesWidth: number = frameSize*3;
 let yFramesHeight: number = frameSize*4;
 
@@ -413,10 +414,13 @@ function petWander() {
         }
     }
 
+    // Changed Animation function
+    animationFrames = frameSize;
+
     playAnimation = setInterval(() => {
         thePet.style.backgroundPositionY = `${animationType}px`
-        thePet.style.backgroundPositionX = `${frameSize}px`;
-        frameSize += frameSize;
+        thePet.style.backgroundPositionX = `${animationFrames}px`;
+        animationFrames += animationFrames
     }, 200)
 
     return new Promise(resolve => {

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tamagotchi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Pixelify+Sans:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="petStatus">
+        <div class="flex-1">
+            <p>❤️</p>
+            <div class="petHPBar">
+                <div class="petHp"></div>
+            </div>
+        </div>
+        <div class="flex-1">
+            <p>🍖</p>
+            <div class="petHungerBar">
+                <div class="petHunger"></div>
+            </div>
+        </div>
+        <div class="flex-1">
+            <p>😺</p>
+            <div class="petHappyBar">
+                <div class="petHappy"></div>
+            </div>
+        </div>
+    </div>
+    <div class="petPen">
+        <div class="petInfo">
+            <div class="petName">Name: Fluffy</div>
+            <div class="petLevel">Level: 1</div>
+            <div class="petExp">Exp: 0</div>
+            <div class="money">💰</div>
+        </div>
+        <div class="wanderArea">
+            <div class="thePet animatedCat"></div>
+        </div>
+    </div>
+    <div class="petControls">
+        <div class="controlsBtn btnPet">Pet</div>
+        <div class="controlsBtn btnFeed">Feed</div>
+        <div class="controlsBtn btnPlay">Play</div>
+        <div class="controlsBtn btnShop">Shop</div>
+    </div>
+    <div class="minigame hide">
+        <div class="minigameStatus">
+            <div class="minigameTimer">Time: 30s</div>
+            <div class="minigamePoints">Points: 0</div>
+        </div>
+        <div class="flex">
+            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/775dfae9-f9b5-46c9-bcd8-62e7d40ba177/dg8lhx6-9b57be67-b9bd-4a09-9299-dc5cbd789ba8.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzc3NWRmYWU5LWY5YjUtNDZjOS1iY2Q4LTYyZTdkNDBiYTE3N1wvZGc4bGh4Ni05YjU3YmU2Ny1iOWJkLTRhMDktOTI5OS1kYzVjYmQ3ODliYTguZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.--rT4g4fdIdT8L6A3iNbyWPqvBx9NVayq4_lXygw5kk" alt="cat" width="100px" height="100px" class="cat">
+            <div class="whackMole"></div>
+        </div>
+    </div>
+    <div class="gameStart">
+        <h1>Enter name for your cat:</h1>
+        <input type="text" placeholder="Fluffy" class="nameInput" value="Fluffy">
+        <div class="controlsBtn playGameBtn">Play</div>
+    </div>
+    <div class="petStore hide">
+        <div class="closeStoreBtn">X</div>
+        <div class="yourShoppingMoney">Money: 500</div>
+        <div class="shopContent">
+            <div class="shopItem">
+                <div class="shopItemInfo">
+                    <div>💊</div>
+                    <div>Medicine</div>
+                    <div>Cost: 100</div>
+                </div>
+                <div>
+                    <div>❤️ 30</div>
+                    <div>🍖 30</div>
+                    <div>😺 30</div>
+                </div>
+                <div>
+                    <div class="controlsBtn">Buy</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="feedUI hide">
+        <div class="closeFeedUIBtn">X</div>
+        <div class="feedInventory">
+            <div class="shopItem">
+                <div class="shopItemInfo">
+                    <div>💊</div>
+                    <div>Medicine</div>
+                    <div>Cost: 100</div>
+                </div>
+                <div>
+                    <div>❤️ 30</div>
+                    <div>🍖 30</div>
+                    <div>😺 30</div>
+                </div>
+                <div>
+                    <div class="controlsBtn">Feed</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="gameOver hide">
+        <h1>GAME OVER</h1>
+        <div class="controlsBtn restartGame">Restart</div>
+    </div>
+    <div class="overlay"></div>
+</body>
+</html>

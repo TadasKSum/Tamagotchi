@@ -1,0 +1,350 @@
+/* Pixel Font Import */
+.pixelify-sans-pixelGame {
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/*================================*/
+body {
+  background-image: url("https://media.istockphoto.com/id/1267402977/vector/pixel-red-brick-wall-seamless-pattern.jpg?s=612x612&w=0&k=20&c=h82t23U9U3ylQsMXcWLx1Z2j_MSzpjAGoE4luaSWBXY=");
+  background-repeat: repeat;
+  background-size: auto;
+  background-attachment: fixed;
+}
+
+p {
+  font-size: 22px;
+}
+
+.petPen {
+  width: 1300px;
+  height: 485px;
+  position: relative;
+  background-image: url("https://imgcdn.stablediffusionweb.com/2024/4/5/68c1d8c9-5b75-4a4c-92ba-9868b94af92e.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 5px auto;
+  border-radius: 10px;
+  border-width: 5px;
+  border-style: inset;
+}
+
+.wanderArea {
+  z-index: 5;
+  width: 610px;
+  height: 210px;
+  position: absolute;
+  bottom: 0;
+  left: 310px;
+}
+
+.petControls {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+.petControls > div {
+  font-family: "Pixelify Sans", sans-serif;
+}
+
+.petStatus {
+  display: flex;
+  width: 1300px;
+  margin: 0 auto;
+  gap: 5px;
+}
+
+.flex-1 {
+  flex: 1;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.petHPBar, .petHungerBar, .petHappyBar {
+  width: 100%;
+  height: 25px;
+  border: solid black 1px;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: darkgrey;
+}
+
+.petHp {
+  display: inline-block;
+  height: 25px;
+  background-color: #2baf2b;
+}
+
+.petHunger {
+  display: inline-block;
+  height: 25px;
+  background-color: #f8aa00;
+}
+
+.petHappy {
+  display: inline-block;
+  height: 25px;
+  background-color: #f7ff00;
+}
+
+.petInfo {
+  font-family: "Pixelify Sans", sans-serif;
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.controlsBtn {
+  font-size: 28px;
+  background: linear-gradient(141deg, rgb(8, 79, 190) 50%, rgb(70, 186, 217) 100%);
+  color: white;
+  padding: 10px;
+  width: 80px;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.controlsBtn:hover {
+  background: linear-gradient(141deg, rgb(207, 51, 151) 50%, rgb(217, 70, 117) 100%);
+}
+
+/*.thePet {
+  width: 60px; // 60; 70; 80; 90; 100 = 5 sizes for growing
+  position: absolute;
+  transform: scaleX(1); // Flips horizontally 1 = normal; -1 = flipped
+  top: 120px; // max position for top on max size = 120px; range 0 - 120px
+  left: 510px; // max position for left on max size = 510px; range 0 - 510px
+  z-index: 10;
+}*/
+/* ====Game Start==== */
+.gameStart {
+  position: absolute;
+  top: 130px;
+  left: 440px;
+  z-index: 30;
+  width: 600px;
+  height: 260px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-direction: column;
+}
+.gameStart h1 {
+  margin-top: 90px;
+  margin-bottom: 0;
+  font-family: "Pixelify Sans", sans-serif;
+}
+.gameStart .controlsBtn {
+  margin-top: 10px;
+  font-family: "Pixelify Sans", sans-serif;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 29;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Animated Cat */
+.animatedCat {
+  background-image: url("images/cat_sprite_32x32frame.png");
+  background-size: 192px 256px;
+  background-position-x: 0px;
+  background-position-y: 0px;
+  width: 64px;
+  height: 64px;
+  background-repeat: repeat;
+  position: absolute;
+  transform: scaleX(1);
+  top: 120px;
+  left: 510px;
+  z-index: 10;
+}
+
+/*====Game Store====*/
+.petStore {
+  position: absolute;
+  top: 100px;
+  left: 340px;
+  z-index: 31;
+  width: 800px;
+  height: 330px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.shopContent {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.closeStoreBtn, .closeFeedUIBtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border-radius: 50%;
+  background-color: #c61818;
+  color: white;
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 20px;
+  padding: 6px;
+  width: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+.closeStoreBtn:hover, .closeFeedUIBtn:hover {
+  background-color: #0d6efd;
+}
+
+.yourShoppingMoney {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.shopItem {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border-radius: 10px;
+  border: solid black 1px;
+  width: 250px;
+  justify-content: space-between;
+  padding: 10px;
+}
+.shopItem .controlsBtn {
+  font-size: 16px;
+  width: 60px;
+}
+
+/* Feed UI */
+.feedUI {
+  position: absolute;
+  top: 60px;
+  left: 340px;
+  z-index: 32;
+  width: 800px;
+  height: 530px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: white;
+  overflow: auto;
+}
+
+.feedInventory {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: auto;
+}
+
+/* Game Over */
+.gameOver {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 160px;
+  left: 500px;
+  z-index: 99;
+}
+.gameOver h1 {
+  color: white;
+  text-align: center;
+  font-size: 80px;
+  margin-bottom: 20px;
+}
+
+/* Hide */
+.hide {
+  display: none;
+}
+
+/*======Minigame======*/
+.minigame {
+  position: absolute;
+  top: 80px;
+  left: 250px;
+  z-index: 20;
+  width: 1000px;
+  height: 560px;
+  padding: 10px;
+  border-radius: 10px;
+  background-image: url("https://m.media-amazon.com/images/I/71i4boUr2uL._AC_UF1000,1000_QL80_.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.minigameStatus {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.cat {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.whackMole {
+  width: 500px;
+  height: 500px;
+  margin: 10px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  border-radius: 10px;
+  border: black solid 1px;
+  padding: 10px;
+  gap: 10px;
+  background-color: #6c757d;
+}
+
+.cell {
+  border: black solid 1px;
+  background-color: black;
+}
+
+.d-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mouse {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background-image: url("https://www.redwolf.in/image/cache/catalog/stickers/jerry-face-sticker-india-600x800.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.mouse:hover {
+  box-shadow: 0 0 20px #f6bd0c;
+}
+
+/*# sourceMappingURL=style.css.map */
